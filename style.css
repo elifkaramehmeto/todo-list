@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, rgb(137, 181, 197), rgb(42, 103, 141));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header, form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.todo-input, .todo-button{
+border:none;
+padding: 0.3rem;
+background-color: white;
+cursor: pointer;
+}
+.todo-button i{
+    color: rgb(22, 74, 106);
+}
