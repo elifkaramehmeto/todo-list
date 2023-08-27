@@ -1,7 +1,5 @@
 body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-image: linear-gradient(90deg, rgb(137, 181, 197), rgb(42, 103, 141));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -12,11 +10,47 @@ header, form{
     color: white;
 }
 .todo-input, .todo-button{
-border:none;
-padding: 0.3rem;
-background-color: white;
-cursor: pointer;
+    border:none;
+    padding: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+
 }
 .todo-button i{
     color: rgb(22, 74, 106);
 }
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    background-color: white;
+    margin: 0.5rem;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo li{
+    flex:1;
+}
+.done-btn{
+    background-color:rgb(97, 216, 97);
+    border: none;
+    padding: 7px;
+}
+.delete-btn{
+    background-color:rgb(221, 40, 27);
+    border: none;
+    padding: 7px;
+}
+.delete-btn, .done-btn{
+    color: white;
+}
+    
+

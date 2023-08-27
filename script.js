@@ -23,4 +23,5 @@ function addTodo(event) {
     deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
     deleteButton.classList.add("delete-btn");
     todoDiv.appendChild(deleteButton);
+    todoList.appendChild(todoDiv);
 }
