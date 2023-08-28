@@ -18,7 +18,7 @@ header, form{
 }
 .todo-button{
     border:none;
-    height: 28px;
+    height: 29px;
     background-color: white;
     cursor: pointer;
 }
@@ -71,6 +71,9 @@ header, form{
 .done{
 text-decoration: line-through;
 opacity: 0.5;
+}
+.edit-input{
+    border: none;
 }
 
     

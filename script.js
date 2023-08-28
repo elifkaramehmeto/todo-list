@@ -9,6 +9,10 @@ todoList.addEventListener('click' , editTodo);
 
 function addTodo(event) {
     event.preventDefault();
+    if (todoInput.value === "") {
+        alert("Input field cannot be left blank!");
+        return;
+    }
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
     const newTodo = document.createElement("li");
@@ -52,23 +56,16 @@ function doneDelete(event) {
     }
 }
 
-
-function editTodo(todo) {
+function editTodo(todo){
     const todoItem = todo.querySelector(".todo-item");
     const todoText = todoItem.innerText;
 
     const editInput = document.createElement("input");
-    editInput.value = todoText;
+    editInput.value =todoText;
     editInput.classList.add("edit-input");
 
-    todoItem.innerHTML = '';
+    todoItem.innerHTML="";
     todoItem.appendChild(editInput);
-    editInput.focus();
 
-    editInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            todoItem.innerHTML = editInput.value;
-        }
-    });
 }
 
