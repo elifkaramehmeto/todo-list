@@ -3,13 +3,14 @@ const todoButton = document.querySelector(".todo-button");
 const todoList  = document.querySelector(".todo-list");
 
 todoButton.addEventListener('click', addTodo);
+todoList.addEventListener('click' , doneDelete);
 
 function addTodo(event) {
     event.preventDefault();
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
     const newTodo = document.createElement("li");
-    newTodo.innerText = 'test'
+    newTodo.innerText = todoInput.value;
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
     todoList.appendChild(todoDiv); 
@@ -24,4 +25,17 @@ function addTodo(event) {
     deleteButton.classList.add("delete-btn");
     todoDiv.appendChild(deleteButton);
     todoList.appendChild(todoDiv);
+    todoInput.value = " ";
+}
+function doneDelete(event) {
+    const item = event.target;
+    
+    if (item.classList[0] === "delete-btn") {
+        const todo = item.parentElement;
+        todo.remove();
+    }
+    if( item.classList[0] === "done-btn") {
+        const todo = item.parentElement;
+        todo.classList.toggle("done");
+    }
 }
