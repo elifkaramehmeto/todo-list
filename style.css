@@ -9,15 +9,22 @@ header, form{
     align-items: center;
     color: white;
 }
-.todo-input, .todo-button{
+.todo-input{
+    width: 200px;
     border:none;
-    padding: 0.5rem;
+    padding: 0.4rem;
     background-color: white;
     cursor: pointer;
-
 }
-.todo-button i{
+.todo-button{
+    border:none;
+    height: 28px;
+    background-color: white;
+    cursor: pointer;
+}
+.fa-square-plus{
     color: rgb(22, 74, 106);
+    font-size: 20px;
 
 }
 .todo-container{
@@ -37,23 +44,28 @@ header, form{
     justify-content: space-between;
     align-items: center;
 }
+.todo-item{
+    padding: 5px;
+}
 .todo li{
     flex:1;
 }
 .done-btn{
     background-color:rgb(97, 216, 97);
-    border: none;
-    padding: 7px;
 }
 .delete-btn{
     background-color:rgb(221, 40, 27);
+}
+.edit-btn{
+    background-color: rgb(31, 147, 220);
+}
+.delete-btn, .done-btn, .edit-btn{
+    color: white;
     border: none;
     padding: 7px;
+    cursor: pointer;
 }
-.delete-btn, .done-btn{
-    color: white;
-}
-.fa-check, .fa-trash{
+.fa-check, .fa-trash, .fa-pen-to-square{
     pointer-events: none;
 }
 .done{
